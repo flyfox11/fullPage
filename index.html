@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fullPage实战</title>
+    <link href="http://cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.css" rel="stylesheet">
+</head>
+<body>
+<div id="fullpage">
+    <div class="section">第一屏</div>
+    <div class="section">
+        <div class="slide">第一幕</div>
+        <div class="slide">第二幕</div>
+        <div class="slide">第三幕</div>
+    </div>
+    <div class="section">第三屏</div>
+    <div class="section">第四屏</div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<script src="http://cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.js"></script>
+<script>
+    $(function(){
+        $('#fullpage').fullpage({
+            'verticalCentered': false,//内容是否垂直居中
+            'css3': true,
+            'sectionsColor': ['#254875', '#00FF00', '#ACCE8C', '#695684'],//每一屏的颜色
+            anchors: ['page1', 'page2', 'page3', 'page4'],//记录用户上次滑动的页数，初始化时自动跳到此页
+            'navigation': true,//是否添加导航的小圆点，默认位置是右侧居中
+            navigationColor:'#254875',
+            'navigationPosition': 'right',//导航的位置：left或right
+            'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple']//导航tip名,放在导航的小圆点上，出现的文字
+        })
+    })
+</script>
+</body>
+</html>
